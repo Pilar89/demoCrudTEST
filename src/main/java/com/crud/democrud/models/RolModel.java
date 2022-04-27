@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "rol")
 
-public class UsuarioRolModel {
+public class RolModel {
 
 
   @Id
@@ -16,10 +16,10 @@ public class UsuarioRolModel {
 
   private String rol;
 
-  public UsuarioRolModel() {
+  public RolModel() {
   }
 
-  public UsuarioRolModel(String rol) {
+  public RolModel(String rol) {
     this.rol = rol;
   }
 
