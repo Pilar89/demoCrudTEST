@@ -17,6 +17,28 @@ public class UsuarioModel {
   private String email;
   private Integer prioridad;
 
+
+  public boolean nombreEsNulo(){
+    if (this.nombre == null || this.nombre.isEmpty()) {
+      return true;
+    }
+    return false;
+  }
+
+  public boolean emailEsNulo(){
+    if (this.email == null || this.email.isEmpty()) {
+      return true;
+    }
+    return false;
+  }
+
+  public boolean prioridadEsNulo(){
+    if ( this.prioridad == null) {
+      return true;
+    }
+    return false;
+  }
+
   public void setPrioridad(Integer prioridad) {
     this.prioridad = prioridad;
   }
@@ -65,4 +87,11 @@ public class UsuarioModel {
       inverseJoinColumns = {@JoinColumn(name = "rol_usuario")})
   private List<RolModel> roles = new ArrayList<RolModel>();
 
+  public List<RolModel> getRoles() {
+    return roles;
+  }
+
+  public void setRoles(List<RolModel> roles) {
+    this.roles = roles;
+  }
 }
