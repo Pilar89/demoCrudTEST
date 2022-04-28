@@ -12,7 +12,7 @@ import java.util.Optional;
 public class UsuarioService {
     @Autowired
     UsuarioRepository usuarioRepository;
-    
+
     public ArrayList<UsuarioModel> obtenerUsuarios(){
         return (ArrayList<UsuarioModel>) usuarioRepository.findAll();
     }
@@ -40,5 +40,5 @@ public class UsuarioService {
     }
 
 
-    
+
 }

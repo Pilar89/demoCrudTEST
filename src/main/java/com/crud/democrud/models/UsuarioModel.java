@@ -57,7 +57,6 @@ public class UsuarioModel {
     this.email = email;
   }
 
-  //Se implementa un tercera tabla UsuarioRol que sirve de punte para la relacion ManyToMany
 
   @ManyToMany(cascade = CascadeType.ALL)
   @JoinTable(
@@ -65,4 +64,5 @@ public class UsuarioModel {
       joinColumns = {@JoinColumn(name = "usuario_rol")},
       inverseJoinColumns = {@JoinColumn(name = "rol_usuario")})
   private List<RolModel> roles = new ArrayList<RolModel>();
+
 }
