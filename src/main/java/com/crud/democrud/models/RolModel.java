@@ -1,13 +1,10 @@
 package com.crud.democrud.models;
 
-
 import javax.persistence.*;
 
 @Entity
 @Table(name = "rol")
-
 public class RolModel {
-
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,8 +13,7 @@ public class RolModel {
 
   private String rol;
 
-  public RolModel() {
-  }
+  public RolModel() {}
 
   public RolModel(String rol) {
     this.rol = rol;
@@ -30,5 +26,4 @@ public class RolModel {
   public void setRol(String rol) {
     this.rol = rol;
   }
-
 }

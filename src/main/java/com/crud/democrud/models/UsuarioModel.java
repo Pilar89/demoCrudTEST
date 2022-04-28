@@ -17,23 +17,22 @@ public class UsuarioModel {
   private String email;
   private Integer prioridad;
 
-
-  public boolean nombreEsNulo(){
+  public boolean nombreEsNulo() {
     if (this.nombre == null || this.nombre.isEmpty()) {
       return true;
     }
     return false;
   }
 
-  public boolean emailEsNulo(){
+  public boolean emailEsNulo() {
     if (this.email == null || this.email.isEmpty()) {
       return true;
     }
     return false;
   }
 
-  public boolean prioridadEsNulo(){
-    if ( this.prioridad == null) {
+  public boolean prioridadEsNulo() {
+    if (this.prioridad == null) {
       return true;
     }
     return false;
@@ -78,7 +77,6 @@ public class UsuarioModel {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   @ManyToMany(cascade = CascadeType.ALL)
   @JoinTable(

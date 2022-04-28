@@ -10,11 +10,9 @@ import java.util.Optional;
 @CrossOrigin
 @RestController
 @RequestMapping("/rol")
-
 public class RolController {
 
-  @Autowired
-  RolService rolService;
+  @Autowired RolService rolService;
 
   @GetMapping()
   public ArrayList<RolModel> obtenerRoles() {
@@ -22,7 +20,7 @@ public class RolController {
   }
 
   @PostMapping()
-  public RolModel guardarRol (@RequestBody RolModel rol) {
+  public RolModel guardarRol(@RequestBody RolModel rol) {
     return this.rolService.guardarRol(rol);
   }
 
@@ -40,6 +38,4 @@ public class RolController {
       return "No pudo eliminar el usuario con id" + idRol;
     }
   }
-
-
 }
